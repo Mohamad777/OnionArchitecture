@@ -2,12 +2,16 @@
 
 namespace OA.Domain.UserAgg
 {
-    public class User :BaseModel<long>
+    public class User : BaseModel<long>
     {
         public string Phone { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
         public bool IsDeleted { get; set; }
+
+        public User()
+        {
+        }
 
         public User(string phone, string email, string password, IUserValidatorService userValidatorService)
         {
