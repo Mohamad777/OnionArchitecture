@@ -14,6 +14,13 @@ namespace OA.Domain.Services
 
         public void CheckPhoneExistance(string phone)
         {
+            // method 1: calling general Repository function
+            if (_userRepository.Exists(x => x.Phone == phone))
+            {
+                throw new AlreadyExistsRecordException($"The phone number {phone} is already exists in database.");
+            }
+
+            // method 2: calling custom UserRepository function
             if (_userRepository.PhoneExists(phone))
             {
                 throw new AlreadyExistsRecordException($"The phone number {phone} is already exists in database.");

@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace OA.Domain.UserAgg
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
-        List<User> GetAll();
-        User GetBy(long id);
-        void Add(User entity);
-        void Edit(User user);
-        void Save();
-
         bool PhoneExists(string phone);
+        IEnumerable<User> GetActiveUsers();
     }
 }

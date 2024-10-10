@@ -12,6 +12,7 @@ namespace OA.Infrastructure.EFCore
     public class MasterContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+
         public MasterContext(DbContextOptions<MasterContext> options) : base(options)
         {
             
