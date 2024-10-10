@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OA.Domain.UserAgg;
 using OA.Infrastructure.EFCore.Mappings;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OA.Infrastructure.EFCore
 {
